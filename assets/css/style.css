@@ -1,0 +1,21 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Martel+Sans:wght@200&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 200;
+    background-color: #FFEDD8;
+    color: #78C0E0;
+}
+
+h1, h2, h3 {
+    font-family: 'Arvo', serif; 
+    font-weight: 700;
+    color: #2F323A;
+}
