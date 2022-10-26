@@ -1,6 +1,15 @@
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Martel+Sans:wght@200&display=swap');
 
+html {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
 * {
     margin: 0;
     border: 0;
@@ -18,4 +27,21 @@ h1, h2, h3 {
     font-family: 'Arvo', serif; 
     font-weight: 700;
     color: #2F323A;
+}
+
+/* header */
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #EE6A05;
+}
+
+header h1 {
+    font-size: 6rem;
+    text-align: center;
+    letter-spacing: -6px;
+    margin: 10px 5% 0;
 }
