@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <meta name="description" content="Small Browser-Based Game to Test and Train Short-Term Memory!">
+    <meta name="keywords" content="memory, short-term memory, numbers, game, memory game, number game, unforgettable">
+    <title>unforgettable.</title>
 </head>
 <body>
-    
+    <!-- header -->
+    <header>
+        <h1>unforgettable.</h1>
+    </header>
+
+    <!-- difficulty settings section -->
+    <section>
+        <div>
+            <button class="difficulty-button">hard</button>
+            <button class="difficulty-button">normal</button>
+            <button class="difficulty-button">easy</button>
+        </div>
+    </section>
+
+    <!-- main-game area section -->
+    <section>
+        <div>
+            <p id="generated-number">random number</p>
+        </div>
+        <div>
+            <label for="user-number">Answer</label>
+            <input type="number" id="user-number">
+        </div>
+    </section>
+
+    <!-- stats and timer section -->
+    <section>
+        <div>
+            <p id="timer">60 seconds!</p>
+            <p id="correct-answers">Correct: 0</p>
+            <p id="incorrect-answers">Incorrect: 0</p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Share your score:</p>
+        <a href="">social links</a>
+        <a href="">social links</a>
+        <a href="">social links</a>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
