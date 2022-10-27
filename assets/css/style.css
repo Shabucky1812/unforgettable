@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Martel Sans', sans-serif;
-    background-color: #FFEDD8;
+    background-color: #2F323A;
     color: #227396;
 }
 
@@ -31,9 +31,6 @@ h1, h2, h3 {
 /* header */
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 140px;
     background-color: #EE6A05;
@@ -43,7 +40,25 @@ header h1 {
     font-size: 6rem;
     text-align: center;
     letter-spacing: -6px;
-    margin: 10px 5% 0;
+    margin: 0 5%;
+    padding-top: 10px;
+}
+
+/* difficulty settings section */
+
+#difficulty-section {
+    height: 80px;
+    width: 95%;
+    margin: 10px auto;
+    border: 10px solid #227396;
+    border-radius: 30px;
+    clear: both;
+    background-color: #FFEDD8;
+    text-align: center;
+}
+
+#difficulty-section button {
+    
 }
 
 /* footer */
@@ -54,19 +69,19 @@ footer {
     left: 0;
     width: 100%;
     height: 140px;
-    background-color: #2F323A;
-    color: #EE6A05;
+    color: #2F323A;
+    background-color: #EE6A05;
 }
 
 #footer-text {
     font-size: 1.8rem;
     text-align: center;
     margin-top: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #footer-text i {
-    color: #EE6A05;
+    color: #2F323A;
     padding: 0 20px;
     font-size: 2.2rem;
 }
