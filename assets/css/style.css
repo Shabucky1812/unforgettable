@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Martel Sans', sans-serif;
-    background-color: #2F323A;
+    background-color: #FFEDD8;
     color: #227396;
 }
 
@@ -53,12 +53,24 @@ header h1 {
     border: 10px solid #227396;
     border-radius: 30px;
     clear: both;
-    background-color: #FFEDD8;
+    background-color: #2F323A;
     text-align: center;
 }
 
 #difficulty-section button {
-    
+    background-color: #227396;
+    color: #FFEDD8;
+    border-radius: 20px;
+    height: 50px;
+    width: 160px;
+    margin: 14px 40px;
+    font-size: 180%;
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+}
+
+#difficulty-section button:hover {
+    background-color: #EE6A05;
 }
 
 /* footer */
