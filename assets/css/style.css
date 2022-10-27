@@ -97,6 +97,13 @@ header h1 {
     box-shadow: 2px 2px 4px #FB8C37;
 }
 
+#output-display p {
+    text-align: center;
+    font-size: 5em;
+    font-weight: 400;
+    letter-spacing: 30px;
+}
+
 /* footer */
 
 footer {
