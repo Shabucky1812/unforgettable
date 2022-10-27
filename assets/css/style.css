@@ -46,11 +46,11 @@ header h1 {
 
 /* difficulty settings section */
 
-#difficulty-section, #timer-section {
+#difficulty-section, #stats-section {
     height: 60px;
     width: 41%;
     margin: 10px 0 0 5%;
-    border: 8px solid #227396;
+    border: 8px solid #FB8C37;
     border-radius: 30px;
     float: left;
     background-color: #2F323A;
@@ -64,13 +64,21 @@ header h1 {
     height: 40px;
     width: 100px;
     margin: 10px;
-    font-size: 120%;
+    font-size: 1.2em;
     font-family: 'Arvo', serif;
     text-transform: uppercase;
 }
 
 #difficulty-section button:hover {
     background-color: #EE6A05;
+}
+
+#stats-section p {
+    display: inline-block;
+    color: #FFEDD8;
+    font-size: 1.4em;
+    font-family: 'Arvo', serif;
+    margin: 15px;
 }
 
 /* footer */
