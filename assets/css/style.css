@@ -44,18 +44,20 @@ header h1 {
     padding-top: 10px;
 }
 
-/* difficulty settings section */
+/* styling for both bars below header */
 
 #difficulty-section, #stats-section {
     height: 60px;
     width: 41%;
-    margin: 10px 0 0 5%;
+    margin: 10px 0 20px 5%;
     border: 8px solid #FB8C37;
     border-radius: 30px;
     float: left;
     background-color: #2F323A;
     text-align: center;
 }
+
+/* difficulty section button styling */
 
 #difficulty-section button {
     background-color: #227396;
@@ -73,12 +75,26 @@ header h1 {
     background-color: #EE6A05;
 }
 
+/* stats and timer styling */
+
 #stats-section p {
     display: inline-block;
     color: #FFEDD8;
     font-size: 1.4em;
     font-family: 'Arvo', serif;
     margin: 15px;
+}
+
+/* random number output styling */
+
+#output-display {
+    width: 60%;
+    height: 120px;
+    background-color: #FCA35F;
+    clear: both;
+    margin: 0 auto;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 2px 2px 4px #FB8C37;
 }
 
 /* footer */
