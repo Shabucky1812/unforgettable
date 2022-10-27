@@ -32,12 +32,12 @@ h1, h2, h3 {
 
 header {
     width: 100%;
-    height: 140px;
+    height: 100px;
     background-color: #EE6A05;
 }
 
 header h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
     letter-spacing: -6px;
     margin: 0 5%;
@@ -80,20 +80,20 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 140px;
+    height: 100px;
     color: #2F323A;
     background-color: #EE6A05;
 }
 
 #footer-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 8px;
     font-weight: 700;
 }
 
 #footer-text i {
     color: #2F323A;
     padding: 0 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
