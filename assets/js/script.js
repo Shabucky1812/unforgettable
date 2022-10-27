@@ -29,9 +29,28 @@ function runEasyGame() {
 }
 
 function runNormalGame() {
-
+    resetTimer();
 }
 
 function runHardGame() {
 
 }
+
+/**
+ * Resets timer to 60 and counts down until 0.
+ */
+function resetTimer() {
+    
+    document.getElementById('timer').textContent = "60";
+    let timerValue = parseInt(document.getElementById('timer').textContent);
+    let timer = setInterval(runTimer, 1000);
+    
+    function runTimer() {
+        timerValue--
+        document.getElementById('timer').textContent = parseInt(timerValue);
+        if (timerValue === 0) {
+            clearInterval(timer);
+        }
+    }
+}
+
