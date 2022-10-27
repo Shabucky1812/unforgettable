@@ -120,12 +120,30 @@ header h1 {
 #input-display input {
     font-size: 1.8em;
     padding: 5px;
-    margin-top: 56px;
+    margin-top: 36px;
     width: 60%;
     font-family: 'Martel Sans', sans-serif;
     background-color: #FFEDD8;
     color: #EE6A05;
     border-radius: 2px;
+    clear: both;
+}
+
+#input-display button {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: block;
+    margin: 15px auto 0;
+    background-color: #EE6A05;
+    color: #FFEDD8;
+    font-size: 1.2em;
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+}
+
+#input-display button:hover {
+    background-color: #227396;
 }
 
 /* footer */
