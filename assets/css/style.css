@@ -49,7 +49,7 @@ header h1 {
 #difficulty-section, #stats-section {
     height: 60px;
     width: 41%;
-    margin: 10px 0 20px 5%;
+    margin: 40px 0 40px 5%;
     border: 8px solid #FB8C37;
     border-radius: 30px;
     float: left;
@@ -88,7 +88,7 @@ header h1 {
 /* random number output styling */
 
 #output-display {
-    width: 60%;
+    width: 50%;
     height: 120px;
     background-color: #FCA35F;
     clear: both;
@@ -102,6 +102,30 @@ header h1 {
     font-size: 5em;
     font-weight: 400;
     letter-spacing: 30px;
+    padding-left: 20px;
+}
+
+/* user input styling */
+
+#input-display {
+    width: 40%;
+    height: 180px;
+    background-color: #2F323A;
+    margin: 40px auto 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #2F323A;
+    text-align: center;
+}
+
+#input-display input {
+    font-size: 1.8em;
+    padding: 5px;
+    margin-top: 56px;
+    width: 60%;
+    font-family: 'Martel Sans', sans-serif;
+    background-color: #FFEDD8;
+    color: #EE6A05;
+    border-radius: 2px;
 }
 
 /* footer */
