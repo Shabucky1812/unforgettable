@@ -88,7 +88,8 @@ header h1 {
 /* random number output styling */
 
 #output-display {
-    width: 50%;
+    width: 60em;
+    max-width: 90%;
     height: 120px;
     background-color: #FCA35F;
     clear: both;

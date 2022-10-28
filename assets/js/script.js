@@ -30,6 +30,7 @@ function runEasyGame() {
 
 function runNormalGame() {
     resetTimer();
+    alert(`thinhs happeended`)
 }
 
 function runHardGame() {
