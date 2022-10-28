@@ -21,6 +21,19 @@ function checkAnswer(difficulty, correctNumber) {
     console.log(correctNumber);
 }
 
+function addCorrectScore() {
+
+}
+
+function addIncorrectScore() {
+
+}
+
+
+/**
+ * Calls resetTimer function and starts the correct game loop.
+ * @param {*} difficulty - determines which difficulty loop should be run.
+ */
 function runGame(difficulty) {
     if (document.getElementById('timer').className === 'inactive') {
         resetTimer();
