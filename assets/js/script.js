@@ -30,7 +30,8 @@ function runEasyGame() {
 
 function runNormalGame() {
     resetTimer();
-    alert(`thinhs happeended`)
+    let currentNumber = generateNumber(6);
+    console.log(currentNumber);
 }
 
 function runHardGame() {
@@ -55,3 +56,20 @@ function resetTimer() {
     }
 }
 
+/**
+ * Generates a random number based on the difficulty selected by the player and returns it to be displayed.
+ * @param {*} digits - determines the length of the random generated number (based on game difficulty).
+ * @returns the string randomNumber which contains the newly created number to be outputted to the screen.
+ */
+function generateNumber(digits) {
+    let randomNumber = '';
+    let i = 0;
+
+    while (i < digits) {
+        let randomDigit = Math.floor(Math.random() * 10);
+        randomNumber += randomDigit;
+        i++;
+    }
+
+    return randomNumber;
+}
