@@ -5,44 +5,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
-            if (this.getAttribute('id') === "submit") {
-                checkAnswer();
-            } else if (this.getAttribute('id') === "easy-button") {
-                runEasyGame();
+            if (this.getAttribute('id') === "easy-button") {
+                runGame('easy');
             } else if (this.getAttribute('id') === "normal-button") {
-                runNormalGame();
+                runGame('normal');
             } else if (this.getAttribute('id') === "hard-button") {
-                runHardGame();
-            } else {
-                throw `Button clicked (${this.getAttribute('id')}) is not recognised`;
+                runGame('hard');
             }
         })
     }
 })
 
-function checkAnswer() {
-
+function checkAnswer(difficulty, correctNumber) {
+    console.log(difficulty);
+    console.log(correctNumber);
 }
 
-function runEasyGame() {
-
-}
-
-function runNormalGame() {
+function runGame(difficulty) {
     if (document.getElementById('timer').className === 'inactive') {
         resetTimer();
-        let currentNumber = generateNumber(6);
-        document.getElementById('generated-number').textContent = currentNumber;
-        window.setTimeout(hideNumber, 1500);
-        function hideNumber() {
-            document.getElementById('generated-number').textContent = '?';
+        if (difficulty === 'easy') {
+            easyLoop();
+        } else if (difficulty === 'normal') {
+            normalLoop();
+        } else if (difficulty === 'hard') {
+            hardLoop();
         }
     } else {
         alert("You cannot start a new game whilst an old game is still running!");
     }
 }
 
-function runHardGame() {
+function easyLoop() {
+
+}
+
+function normalLoop() {
+    let currentNumber = generateNumber(6);
+    document.getElementById('generated-number').textContent = currentNumber;
+    window.setTimeout(hideNumber, 1500);
+    function hideNumber() {
+        document.getElementById('generated-number').textContent = '?';
+    }
+    document.getElementById('submit').addEventListener('click', function () {checkAnswer('normal', currentNumber)});
+}
+
+function hardLoop() {
 
 }
 
