@@ -31,7 +31,11 @@ function runEasyGame() {
 function runNormalGame() {
     resetTimer();
     let currentNumber = generateNumber(6);
-    console.log(currentNumber);
+    document.getElementById('generated-number').textContent = currentNumber;
+    window.setTimeout(hideNumber, 1500);
+    function hideNumber() {
+        document.getElementById('generated-number').textContent = '?';
+    }
 }
 
 function runHardGame() {
