@@ -29,12 +29,16 @@ function runEasyGame() {
 }
 
 function runNormalGame() {
-    resetTimer();
-    let currentNumber = generateNumber(6);
-    document.getElementById('generated-number').textContent = currentNumber;
-    window.setTimeout(hideNumber, 1500);
-    function hideNumber() {
-        document.getElementById('generated-number').textContent = '?';
+    if (document.getElementById('timer').className === 'inactive') {
+        resetTimer();
+        let currentNumber = generateNumber(6);
+        document.getElementById('generated-number').textContent = currentNumber;
+        window.setTimeout(hideNumber, 1500);
+        function hideNumber() {
+            document.getElementById('generated-number').textContent = '?';
+        }
+    } else {
+        alert("You cannot start a new game whilst an old game is still running!");
     }
 }
 
@@ -46,7 +50,7 @@ function runHardGame() {
  * Resets timer to 60 and counts down until 0.
  */
 function resetTimer() {
-    
+    document.getElementById('timer').className = "active";
     document.getElementById('timer').textContent = "60";
     let timerValue = parseInt(document.getElementById('timer').textContent);
     let timer = setInterval(runTimer, 1000);
@@ -56,6 +60,7 @@ function resetTimer() {
         document.getElementById('timer').textContent = parseInt(timerValue);
         if (timerValue === 0) {
             clearInterval(timer);
+            document.getElementById('timer').className = "inactive";
         }
     }
 }
