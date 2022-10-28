@@ -48,6 +48,8 @@ function runHardGame() {
 
 /**
  * Resets timer to 60 and counts down until 0.
+ * Also sets the game as active for the timer's duration
+ * which prevents another game being started at the same time.
  */
 function resetTimer() {
     document.getElementById('timer').className = "active";

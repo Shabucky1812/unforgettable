@@ -109,10 +109,11 @@ header h1 {
 /* user input styling */
 
 #input-display {
-    width: 40%;
+    width: 30em;
+    max-width: 80%;
     height: 180px;
     background-color: #2F323A;
-    margin: 40px auto 0;
+    margin: 40px auto 140px;
     border-radius: 20px;
     box-shadow: 2px 2px 4px #2F323A;
     text-align: center;
