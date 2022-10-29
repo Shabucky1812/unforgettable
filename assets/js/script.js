@@ -17,16 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-
-function addCorrectScore() {
-    
-}
-
-function addIncorrectScore() {
-    
-}
-
-
 /**
  * Calls resetTimer function and starts the correct game loop.
  * @param {*} difficulty - determines which difficulty loop should be run.
@@ -46,24 +36,48 @@ function runGame(difficulty) {
     }
 }
 
+/**
+ * Displays a random 4-digit number and hides it after 1.5 seconds.
+ */
 function easyLoop() {
-    
+    let currentNumber = generateNumber(4);
+    document.getElementById('generated-number').textContent = currentNumber;
+    document.getElementById('generated-number').setAttribute('data-difficulty', 'easy')
+    window.setTimeout(hideNumber, 1500);
 }
 
+/**
+ * Displays a random 6-digit number and hides it after 1.5 seconds.
+ */
 function normalLoop() {
     let currentNumber = generateNumber(6);
     document.getElementById('generated-number').textContent = currentNumber;
+    document.getElementById('generated-number').setAttribute('data-difficulty', 'normal')
     window.setTimeout(hideNumber, 1500);
-    function hideNumber() {
-        document.getElementById('generated-number').hidden = true;
-    }
-    
 }
 
+/**
+ * Displays a random 8-digit number and hides it after 1.5 seconds.
+ */
 function hardLoop() {
-    
+    let currentNumber = generateNumber(8);
+    document.getElementById('generated-number').textContent = currentNumber;
+    document.getElementById('generated-number').setAttribute('data-difficulty', 'hard')
+    window.setTimeout(hideNumber, 1500);
 }
 
+/**
+ * Hides the generated number.
+ */
+function hideNumber() {
+    document.getElementById('generated-number').hidden = true;
+}
+
+/**
+ * Check if the user's answer is correct and calls the according score function.
+ * Also determines if the current game should keep looping or
+ * if the game should be ended.
+ */
 function checkAnswer() {
     let correctNumber = document.getElementById('generated-number').textContent;
     console.log(correctNumber);
@@ -74,7 +88,34 @@ function checkAnswer() {
     } else {
         console.log("incorrect");
     }
-    normalLoop();
+    if (parseInt(document.getElementById('timer').textContent) > 0) {
+        loopCorrectDifficulty();
+    } else {
+        endGame();
+    }
+}
+
+function addCorrectScore() {
+    
+}
+
+function addIncorrectScore() {
+    
+}
+
+function loopCorrectDifficulty() {
+    let numberDifficulty = document.getElementById('generated-number');
+    if (numberDifficulty.getAttribute('data-difficulty') === 'easy') {
+        easyLoop();
+    } else if (numberDifficulty.getAttribute('data-difficulty') === 'normal') {
+        normalLoop();
+    } else if (numberDifficulty.getAttribute('data-difficulty') === 'hard') {
+        hardLoop();
+    }
+}
+
+function endGame() {
+
 }
 
 /**
