@@ -126,7 +126,7 @@ header h1 {
     width: 60%;
     font-family: 'Martel Sans', sans-serif;
     background-color: #FFEDD8;
-    color: #EE6A05;
+    color: #2F323A;
     border-radius: 2px;
     clear: both;
 }
@@ -137,7 +137,7 @@ header h1 {
     border-radius: 20px;
     display: block;
     margin: 15px auto 0;
-    background-color: #EE6A05;
+    background-color: #227396;
     color: #FFEDD8;
     font-size: 1.2em;
     font-family: 'Arvo', serif;
@@ -145,7 +145,7 @@ header h1 {
 }
 
 #input-display button:hover {
-    background-color: #227396;
+    background-color: #EE6A05;
 }
 
 /* footer */
@@ -173,6 +173,10 @@ footer {
     font-size: 2rem;
 }
 
+
+/* media queries */
+
+/* screen sizes below 950px */
 @media screen and (max-width: 950px) {
    
     #difficulty-section, #stats-section {
@@ -188,6 +192,7 @@ footer {
 
 }
 
+/* screen sizes below 500px */
 @media screen and (max-width: 500px) {
 
     header h1 {
