@@ -102,7 +102,10 @@ function checkAnswer() {
     if (parseInt(document.getElementById('timer').textContent) > 0) {
         window.setTimeout(loopCorrectDifficulty, 1000);
     } else {
-        endGame();
+        window.setTimeout(function() {
+            document.getElementById('generated-number').textContent = 'FINISH'
+            endGame();
+        }, 1000)
     }
 }
 
@@ -138,8 +141,18 @@ function loopCorrectDifficulty() {
     }
 }
 
+/**
+ * Sends an alert to the user with their final scores at the end of a game.
+ * Also resets the score tallies to 0.
+ */
 function endGame() {
     document.getElementById('timer').setAttribute('data-game-status', 'inactive');
+    let finishScore = document.getElementById('score').textContent;
+    let finishIncorrectScore = document.getElementById('incorrect-answers').textContent;
+    let difficulty = document.getElementById('generated-number').getAttribute('data-difficulty');
+    alert(`Congratulations! You finished ${difficulty} difficulty with a total of ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers.`)
+    document.getElementById('score').textContent = '0';
+    document.getElementById('incorrect-answers').textContent = '0';
 }
 
 /**
