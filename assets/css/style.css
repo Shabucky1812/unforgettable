@@ -172,3 +172,51 @@ footer {
     padding: 0 20px;
     font-size: 2rem;
 }
+
+@media screen and (max-width: 950px) {
+   
+    #difficulty-section, #stats-section {
+        width: 90%;
+        margin: 10px auto;
+        float: none;
+    }
+
+    #output-display p {
+        font-size: 4em;
+        letter-spacing: 15px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    header h1 {
+        font-size: 3rem;
+        padding-top: 20px;
+    }
+
+    #difficulty-section button {
+        width: 85px;
+        font-size: 1.0em;
+        font-weight: 600;
+        margin: 10px 3px;
+    }
+
+    #stats-section p {
+        font-size: 1.2em;
+        margin: 20px 5px;
+    }
+
+    #output-display p {
+        font-size: 3em;
+        letter-spacing: 10px;
+        padding: 10px;
+    }
+
+    #input-display button {
+        font-size: 1.0em;
+        font-weight: 600;
+        width: 160px;
+    }
+
+}
