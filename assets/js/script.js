@@ -16,9 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-function checkAnswer(difficulty, correctNumber) {
-    console.log(difficulty);
+function checkAnswer(difficulty, correctNumber) {;
     console.log(correctNumber);
+    let userAnswer = parseInt(document.getElementById('user-number').value);
+    if (userAnswer === parseInt(correctNumber)) {
+        console.log("correct");
+    } else {
+        console.log("incorrect");
+    }
+    if (parseInt(document.getElementById('timer').textContent) > 0) {
+        difficulty();
+    } else {
+        console.log("finished");
+    }
 }
 
 function addCorrectScore() {
@@ -60,7 +70,7 @@ function normalLoop() {
     function hideNumber() {
         document.getElementById('generated-number').textContent = '?';
     }
-    document.getElementById('submit').addEventListener('click', function () {checkAnswer('normal', currentNumber)});
+    document.getElementById('submit').addEventListener('click', function () {checkAnswer(normalLoop, currentNumber)});
 }
 
 function hardLoop() {
@@ -102,6 +112,6 @@ function generateNumber(digits) {
         randomNumber += randomDigit;
         i++;
     }
-
+    console.log(randomNumber);
     return randomNumber;
 }
