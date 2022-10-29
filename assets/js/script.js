@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName('button');
-    document.getElementById('submit').addEventListener('click', checkAnswer);
+    document.getElementById('submit').addEventListener('click', checkGameRunning);
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
@@ -74,6 +74,16 @@ function hideNumber() {
 }
 
 /**
+ * Check if the game is running and if so allows the submit button to function.
+ */
+function checkGameRunning() {
+    let gameRunning = document.getElementById('timer').getAttribute('data-game-status');
+    if (gameRunning === 'active') {
+        checkAnswer();
+    }
+}
+
+/**
  * Check if the user's answer is correct and calls the according score function.
  * Also determines if the current game should keep looping or
  * if the game should be ended.
@@ -96,12 +106,18 @@ function checkAnswer() {
     }
 }
 
+/**
+ * Increments the score tally by one for every correct answer.
+ */
 function addCorrectScore() {
     let scoreTally = parseInt(document.getElementById('score').textContent);
     scoreTally += 1;
     document.getElementById('score').textContent = scoreTally;
 }
 
+/**
+ * Increments the incorrect score tally by one for every incorrect answer.
+ */
 function addIncorrectScore() {
     let incorrectTally = parseInt(document.getElementById('incorrect-answers').textContent);
     incorrectTally += 1;
@@ -123,7 +139,7 @@ function loopCorrectDifficulty() {
 }
 
 function endGame() {
-
+    document.getElementById('timer').setAttribute('data-game-status', 'inactive');
 }
 
 /**
@@ -142,7 +158,6 @@ function resetTimer() {
         document.getElementById('timer').textContent = parseInt(timerValue);
         if (timerValue === 0) {
             clearInterval(timer);
-            document.getElementById('timer').setAttribute('data-game-status', 'inactive');
         }
     }
 }
