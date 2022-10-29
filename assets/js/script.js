@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName('button');
-    document.getElementById('submit').addEventListener('click', function () {checkAnswer()});
+    document.getElementById('submit').addEventListener('click', checkAnswer);
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * @param {*} difficulty - determines which difficulty loop should be run.
  */
 function runGame(difficulty) {
-    if (document.getElementById('timer').className === 'inactive') {
+    if (document.getElementById('timer').getAttribute('data-game-status') === 'inactive') {
         resetTimer();
         if (difficulty === 'easy') {
             easyLoop();
@@ -80,29 +80,37 @@ function hideNumber() {
  */
 function checkAnswer() {
     let correctNumber = document.getElementById('generated-number').textContent;
-    console.log(correctNumber);
     let userAnswer = parseInt(document.getElementById('user-number').value);
     document.getElementById('generated-number').hidden = false;
     if (userAnswer === parseInt(correctNumber)) {
-        console.log("correct");
+        document.getElementById('generated-number').textContent = 'CORRECT';
+        addCorrectScore();
     } else {
-        console.log("incorrect");
+        document.getElementById('generated-number').textContent = 'WRONG';
+        addIncorrectScore();
     }
     if (parseInt(document.getElementById('timer').textContent) > 0) {
-        loopCorrectDifficulty();
+        window.setTimeout(loopCorrectDifficulty, 1000);
     } else {
         endGame();
     }
 }
 
 function addCorrectScore() {
-    
+    let scoreTally = parseInt(document.getElementById('score').textContent);
+    scoreTally += 1;
+    document.getElementById('score').textContent = scoreTally;
 }
 
 function addIncorrectScore() {
-    
+    let incorrectTally = parseInt(document.getElementById('incorrect-answers').textContent);
+    incorrectTally += 1;
+    document.getElementById('incorrect-answers').textContent = incorrectTally;
 }
 
+/**
+ * Decides which function to loop based on the selected difficulty.
+ */
 function loopCorrectDifficulty() {
     let numberDifficulty = document.getElementById('generated-number');
     if (numberDifficulty.getAttribute('data-difficulty') === 'easy') {
@@ -124,7 +132,7 @@ function endGame() {
  * which prevents another game being started at the same time.
  */
 function resetTimer() {
-    document.getElementById('timer').className = "active";
+    document.getElementById('timer').setAttribute('data-game-status', 'active');
     document.getElementById('timer').textContent = "60";
     let timerValue = parseInt(document.getElementById('timer').textContent);
     let timer = setInterval(runTimer, 1000);
@@ -134,7 +142,7 @@ function resetTimer() {
         document.getElementById('timer').textContent = parseInt(timerValue);
         if (timerValue === 0) {
             clearInterval(timer);
-            document.getElementById('timer').className = "inactive";
+            document.getElementById('timer').setAttribute('data-game-status', 'inactive');
         }
     }
 }
@@ -153,6 +161,5 @@ function generateNumber(digits) {
         randomNumber += randomDigit;
         i++;
     }
-    console.log(randomNumber);
     return randomNumber;
 }
