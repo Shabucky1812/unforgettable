@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName('button');
+    document.getElementById('submit').addEventListener('click', function () {checkAnswer()});
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
@@ -16,27 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-function checkAnswer(difficulty, correctNumber) {;
-    console.log(correctNumber);
-    let userAnswer = parseInt(document.getElementById('user-number').value);
-    if (userAnswer === parseInt(correctNumber)) {
-        console.log("correct");
-    } else {
-        console.log("incorrect");
-    }
-    if (parseInt(document.getElementById('timer').textContent) > 0) {
-        difficulty();
-    } else {
-        console.log("finished");
-    }
-}
 
 function addCorrectScore() {
-
+    
 }
 
 function addIncorrectScore() {
-
+    
 }
 
 
@@ -60,7 +47,7 @@ function runGame(difficulty) {
 }
 
 function easyLoop() {
-
+    
 }
 
 function normalLoop() {
@@ -68,13 +55,26 @@ function normalLoop() {
     document.getElementById('generated-number').textContent = currentNumber;
     window.setTimeout(hideNumber, 1500);
     function hideNumber() {
-        document.getElementById('generated-number').textContent = '?';
+        document.getElementById('generated-number').hidden = true;
     }
-    document.getElementById('submit').addEventListener('click', function () {checkAnswer(normalLoop, currentNumber)});
+    
 }
 
 function hardLoop() {
+    
+}
 
+function checkAnswer() {
+    let correctNumber = document.getElementById('generated-number').textContent;
+    console.log(correctNumber);
+    let userAnswer = parseInt(document.getElementById('user-number').value);
+    document.getElementById('generated-number').hidden = false;
+    if (userAnswer === parseInt(correctNumber)) {
+        console.log("correct");
+    } else {
+        console.log("incorrect");
+    }
+    normalLoop();
 }
 
 /**
