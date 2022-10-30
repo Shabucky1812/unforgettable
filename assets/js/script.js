@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
+
+    document.getElementById('user-number').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            checkGameRunning();
+        }
+    })
 })
 
 /**
@@ -40,6 +46,9 @@ function runGame(difficulty) {
  * Displays a random 4-digit number and hides it after 1.5 seconds.
  */
 function easyLoop() {
+    document.getElementById('user-number').focus();
+    document.getElementById('user-number').value = '';
+
     let currentNumber = generateNumber(4);
     document.getElementById('generated-number').textContent = currentNumber;
     document.getElementById('generated-number').setAttribute('data-difficulty', 'easy')
@@ -50,6 +59,9 @@ function easyLoop() {
  * Displays a random 6-digit number and hides it after 1.5 seconds.
  */
 function normalLoop() {
+    document.getElementById('user-number').focus();
+    document.getElementById('user-number').value = '';
+
     let currentNumber = generateNumber(6);
     document.getElementById('generated-number').textContent = currentNumber;
     document.getElementById('generated-number').setAttribute('data-difficulty', 'normal')
@@ -60,6 +72,9 @@ function normalLoop() {
  * Displays a random 8-digit number and hides it after 1.5 seconds.
  */
 function hardLoop() {
+    document.getElementById('user-number').focus();
+    document.getElementById('user-number').value = '';
+
     let currentNumber = generateNumber(8);
     document.getElementById('generated-number').textContent = currentNumber;
     document.getElementById('generated-number').setAttribute('data-difficulty', 'hard')
@@ -91,6 +106,7 @@ function checkGameRunning() {
 function checkAnswer() {
     let correctNumber = document.getElementById('generated-number').textContent;
     let userAnswer = parseInt(document.getElementById('user-number').value);
+    document.getElementById('user-number').value = '';
     document.getElementById('generated-number').hidden = false;
     if (userAnswer === parseInt(correctNumber)) {
         document.getElementById('generated-number').textContent = 'CORRECT';
