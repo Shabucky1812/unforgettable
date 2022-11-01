@@ -23,6 +23,12 @@
 
 ## Technologies Used
 
+- This website was created with the HTML5, CSS3, and JavaScript programming languages.  
+- This website was developed within [Gitpod](https://www.gitpod.io/).  
+- The repository for this website was created using [GitHub](https://github.com/) and [Git](https://git-scm.com/) was used for version control.  
+- The fonts used on this website were imported from [Google Fonts](https://fonts.google.com/about).  
+- The image used in the introduction of this README was taken from [Am I Responsive?](https://ui.dev/amiresponsive).  
+
 ## Deployment
 
 This website was developed using Gitpod and pushed to GitHub. It was then deployed from it's GitHub repository to GitHub Pages using the following steps:  
