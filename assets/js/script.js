@@ -1,3 +1,11 @@
+// constant variables
+
+const timer = document.getElementById('timer');
+const userInput = document.getElementById('user-number');
+const activeRandomNumber = document.getElementById('generated-number');
+const correctScore = document.getElementById('score');
+const incorrectScore = document.getElementById('incorrect-answers');
+
 // wait for DOM content to load before running js
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-    document.getElementById('user-number').addEventListener('keydown', function(event) {
+    userInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             checkGameRunning();
         }
@@ -25,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /**
  * Calls resetTimer function and starts the correct game loop.
- * @param {*} difficulty - determines which difficulty loop should be run.
+ * @param {string} difficulty - determines which difficulty loop should be run.
  */
 function runGame(difficulty) {
-    if (document.getElementById('timer').getAttribute('data-game-status') === 'inactive') {
+    if (timer.getAttribute('data-game-status') === 'inactive') {
         resetTimer();
         if (difficulty === 'easy') {
             easyLoop();
@@ -46,12 +54,12 @@ function runGame(difficulty) {
  * Displays a random 4-digit number and hides it after 1.5 seconds.
  */
 function easyLoop() {
-    document.getElementById('user-number').focus();
-    document.getElementById('user-number').value = '';
+    userInput.focus();
+    userInput.value = '';
 
     let currentNumber = generateNumber(4);
-    document.getElementById('generated-number').textContent = currentNumber;
-    document.getElementById('generated-number').setAttribute('data-difficulty', 'easy')
+    activeRandomNumber.textContent = currentNumber;
+    activeRandomNumber.setAttribute('data-difficulty', 'easy')
     window.setTimeout(hideNumber, 1500);
 }
 
@@ -59,12 +67,12 @@ function easyLoop() {
  * Displays a random 6-digit number and hides it after 1.5 seconds.
  */
 function normalLoop() {
-    document.getElementById('user-number').focus();
-    document.getElementById('user-number').value = '';
+    userInput.focus();
+    userInput.value = '';
 
     let currentNumber = generateNumber(6);
-    document.getElementById('generated-number').textContent = currentNumber;
-    document.getElementById('generated-number').setAttribute('data-difficulty', 'normal')
+    activeRandomNumber.textContent = currentNumber;
+    activeRandomNumber.setAttribute('data-difficulty', 'normal')
     window.setTimeout(hideNumber, 1500);
 }
 
@@ -72,12 +80,12 @@ function normalLoop() {
  * Displays a random 8-digit number and hides it after 1.5 seconds.
  */
 function hardLoop() {
-    document.getElementById('user-number').focus();
-    document.getElementById('user-number').value = '';
+    userInput.focus();
+    userInput.value = '';
 
     let currentNumber = generateNumber(8);
-    document.getElementById('generated-number').textContent = currentNumber;
-    document.getElementById('generated-number').setAttribute('data-difficulty', 'hard')
+    activeRandomNumber.textContent = currentNumber;
+    activeRandomNumber.setAttribute('data-difficulty', 'hard')
     window.setTimeout(hideNumber, 1500);
 }
 
@@ -85,14 +93,14 @@ function hardLoop() {
  * Hides the generated number.
  */
 function hideNumber() {
-    document.getElementById('generated-number').hidden = true;
+    activeRandomNumber.hidden = true;
 }
 
 /**
  * Check if the game is running and if so allows the submit button to function.
  */
 function checkGameRunning() {
-    let gameRunning = document.getElementById('timer').getAttribute('data-game-status');
+    let gameRunning = timer.getAttribute('data-game-status');
     if (gameRunning === 'active') {
         checkAnswer();
     }
@@ -104,22 +112,22 @@ function checkGameRunning() {
  * if the game should be ended.
  */
 function checkAnswer() {
-    let correctNumber = document.getElementById('generated-number').textContent;
-    let userAnswer = parseInt(document.getElementById('user-number').value);
-    document.getElementById('user-number').value = '';
-    document.getElementById('generated-number').hidden = false;
+    let correctNumber = activeRandomNumber.textContent;
+    let userAnswer = parseInt(userInput.value);
+    userInput.value = '';
+    activeRandomNumber.hidden = false;
     if (userAnswer === parseInt(correctNumber)) {
-        document.getElementById('generated-number').textContent = 'CORRECT';
+        activeRandomNumber.textContent = 'CORRECT';
         addCorrectScore();
     } else {
-        document.getElementById('generated-number').textContent = 'WRONG';
+        activeRandomNumber.textContent = 'WRONG';
         addIncorrectScore();
     }
-    if (parseInt(document.getElementById('timer').textContent) > 0) {
+    if (parseInt(timer.textContent) > 0) {
         window.setTimeout(loopCorrectDifficulty, 1000);
     } else {
         window.setTimeout(function() {
-            document.getElementById('generated-number').textContent = 'FINISH'
+            activeRandomNumber.textContent = 'FINISH';
             endGame();
         }, 1000)
     }
@@ -129,30 +137,29 @@ function checkAnswer() {
  * Increments the score tally by one for every correct answer.
  */
 function addCorrectScore() {
-    let scoreTally = parseInt(document.getElementById('score').textContent);
+    let scoreTally = parseInt(correctScore.textContent);
     scoreTally += 1;
-    document.getElementById('score').textContent = scoreTally;
+    correctScore.textContent = scoreTally;
 }
 
 /**
  * Increments the incorrect score tally by one for every incorrect answer.
  */
 function addIncorrectScore() {
-    let incorrectTally = parseInt(document.getElementById('incorrect-answers').textContent);
+    let incorrectTally = parseInt(incorrectScore.textContent);
     incorrectTally += 1;
-    document.getElementById('incorrect-answers').textContent = incorrectTally;
+    incorrectScore.textContent = incorrectTally;
 }
 
 /**
  * Decides which function to loop based on the selected difficulty.
  */
 function loopCorrectDifficulty() {
-    let numberDifficulty = document.getElementById('generated-number');
-    if (numberDifficulty.getAttribute('data-difficulty') === 'easy') {
+    if (activeRandomNumber.getAttribute('data-difficulty') === 'easy') {
         easyLoop();
-    } else if (numberDifficulty.getAttribute('data-difficulty') === 'normal') {
+    } else if (activeRandomNumber.getAttribute('data-difficulty') === 'normal') {
         normalLoop();
-    } else if (numberDifficulty.getAttribute('data-difficulty') === 'hard') {
+    } else if (activeRandomNumber.getAttribute('data-difficulty') === 'hard') {
         hardLoop();
     }
 }
@@ -162,13 +169,13 @@ function loopCorrectDifficulty() {
  * Also resets the score tallies to 0.
  */
 function endGame() {
-    document.getElementById('timer').setAttribute('data-game-status', 'inactive');
-    let finishScore = document.getElementById('score').textContent;
-    let finishIncorrectScore = document.getElementById('incorrect-answers').textContent;
-    let difficulty = document.getElementById('generated-number').getAttribute('data-difficulty');
+    timer.setAttribute('data-game-status', 'inactive');
+    let finishScore = correctScore.textContent;
+    let finishIncorrectScore = incorrectScore.textContent;
+    let difficulty = activeRandomNumber.getAttribute('data-difficulty');
     alert(`Congratulations! You finished ${difficulty} difficulty with a total of ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers.`)
-    document.getElementById('score').textContent = '0';
-    document.getElementById('incorrect-answers').textContent = '0';
+    correctScore.textContent = '0';
+    incorrectScore.textContent = '0';
 }
 
 /**
@@ -177,16 +184,16 @@ function endGame() {
  * which prevents another game being started at the same time.
  */
 function resetTimer() {
-    document.getElementById('timer').setAttribute('data-game-status', 'active');
-    document.getElementById('timer').textContent = "60";
-    let timerValue = parseInt(document.getElementById('timer').textContent);
-    let timer = setInterval(runTimer, 1000);
+    timer.setAttribute('data-game-status', 'active');
+    timer.textContent = "60";
+    let timerValue = parseInt(timer.textContent);
+    let timerInterval = setInterval(runTimer, 1000);
     
     function runTimer() {
         timerValue--
-        document.getElementById('timer').textContent = parseInt(timerValue);
+        timer.textContent = parseInt(timerValue);
         if (timerValue === 0) {
-            clearInterval(timer);
+            clearInterval(timerInterval);
         }
     }
 }
