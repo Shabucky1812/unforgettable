@@ -46,7 +46,10 @@ function runGame(difficulty) {
             hardLoop();
         }
     } else {
-        alert("You cannot start a new game whilst an old game is still running!");
+        Swal.fire({
+            icon: 'error',
+            text: "You can't start a new game yet. Finish this one first buddy!"
+        })
     }
 }
 
@@ -173,7 +176,11 @@ function endGame() {
     let finishScore = correctScore.textContent;
     let finishIncorrectScore = incorrectScore.textContent;
     let difficulty = activeRandomNumber.getAttribute('data-difficulty');
-    alert(`Congratulations! You finished ${difficulty} difficulty with a total of ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers.`)
+    Swal.fire({
+        title: 'Great Job!',
+        text: `Congrats! You finished ${difficulty} difficulty with ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers. Think you can do better?`,
+        confirmButtonText: 'Just One More Game!'
+    })
     correctScore.textContent = '0';
     incorrectScore.textContent = '0';
 }
