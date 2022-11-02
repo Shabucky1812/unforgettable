@@ -48,7 +48,8 @@ function runGame(difficulty) {
     } else {
         Swal.fire({
             icon: 'error',
-            text: "You can't start a new game yet. Finish this one first buddy!"
+            text: "You can't start a new game yet. Finish this one first buddy!",
+            confirmButtonColor: '#EE6A05'
         })
     }
 }
@@ -179,7 +180,8 @@ function endGame() {
     Swal.fire({
         title: 'Great Job!',
         text: `Congrats! You finished ${difficulty} difficulty with ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers. Think you can do better?`,
-        confirmButtonText: 'Just One More Game!'
+        confirmButtonText: 'Just One More Game!',
+        confirmButtonColor: '#EE6A05'
     })
     correctScore.textContent = '0';
     incorrectScore.textContent = '0';
