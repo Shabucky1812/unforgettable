@@ -22,7 +22,7 @@ body {
     color: #227396;
 }
 
-h1, h2, h3 {
+h1 {
     font-family: 'Arvo', serif; 
     font-weight: 700;
     color: #2F323A;
@@ -44,12 +44,23 @@ header h1 {
     padding-top: 10px;
 }
 
-/* styling for both bars below header */
+/* instructions */
+
+#instructions {
+    color: #2F323A;
+    width: 90%;
+    max-width: 1000px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+/* styling for both bars below instructions */
 
 #difficulty-section, #stats-section {
     height: 60px;
     width: 41%;
-    margin: 40px 0 40px 5%;
+    margin: 20px 0 40px 5%;
     border: 8px solid #FB8C37;
     border-radius: 30px;
     float: left;
@@ -214,7 +225,7 @@ footer {
 
     #output-display p {
         font-size: 3em;
-        letter-spacing: 10px;
+        letter-spacing: 8px;
         padding: 10px;
     }
 
