@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     document.getElementById('submit').addEventListener('click', checkGameRunning);
-    userInput.addEventListener('keydown', function(event) {
+    userInput.addEventListener('keydown', function checkEnter(event) {
         if (event.key === 'Enter') {
             checkGameRunning();
         }
@@ -123,12 +123,26 @@ function checkAnswer() {
         addIncorrectScore();
     }
     if (parseInt(timer.textContent) > 0) {
+        disableInput();
         window.setTimeout(loopCorrectDifficulty, 1000);
     } else {
         window.setTimeout(function() {
             activeRandomNumber.textContent = 'FINISH';
             endGame();
         }, 1000)
+    }
+}
+
+/**
+ * Temporarily disables input event listeners to prevent bugs from the user
+ * spamming submit
+ */
+function disableInput() {
+    document.getElementById('submit').removeEventListener('click', checkGameRunning);
+    
+    window.setTimeout(enableInput, 2500);
+    function enableInput() {
+        document.getElementById('submit').addEventListener('click', checkGameRunning);
     }
 }
 
