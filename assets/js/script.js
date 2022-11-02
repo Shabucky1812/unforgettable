@@ -9,21 +9,16 @@ const incorrectScore = document.getElementById('incorrect-answers');
 // wait for DOM content to load before running js
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName('button');
-    document.getElementById('submit').addEventListener('click', checkGameRunning);
-
-    for (let button of buttons) {
-        button.addEventListener('click', function() {
-            if (this.getAttribute('id') === "easy-button") {
-                runGame('easy');
-            } else if (this.getAttribute('id') === "normal-button") {
-                runGame('normal');
-            } else if (this.getAttribute('id') === "hard-button") {
-                runGame('hard');
-            }
+    
+    let difficultyButtons = document.getElementsByClassName('difficulty-button');
+    for (let button of difficultyButtons) {
+        button.addEventListener('click', function(event) {
+            let clickedButton = event.currentTarget;
+            runGame(clickedButton.dataset.difficulty);
         })
     }
-
+    
+    document.getElementById('submit').addEventListener('click', checkGameRunning);
     userInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             checkGameRunning();
