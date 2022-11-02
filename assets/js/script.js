@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * @param {string} difficulty - determines which difficulty loop should be run.
  */
 function runGame(difficulty) {
-    if (timer.getAttribute('data-game-status') === 'inactive') {
+    if (timer.dataset.gameStatus === 'inactive') {
         resetTimer();
         if (difficulty === 'easy') {
             easyLoop();
@@ -99,7 +99,7 @@ function hideNumber() {
  * Check if the game is running and if so allows the submit button to function.
  */
 function checkGameRunning() {
-    let gameRunning = timer.getAttribute('data-game-status');
+    let gameRunning = timer.dataset.gameStatus;
     if (gameRunning === 'active') {
         checkAnswer();
     }
@@ -154,11 +154,11 @@ function addIncorrectScore() {
  * Decides which function to loop based on the selected difficulty.
  */
 function loopCorrectDifficulty() {
-    if (activeRandomNumber.getAttribute('data-difficulty') === 'easy') {
+    if (activeRandomNumber.dataset.difficulty === 'easy') {
         easyLoop();
-    } else if (activeRandomNumber.getAttribute('data-difficulty') === 'normal') {
+    } else if (activeRandomNumber.dataset.difficulty === 'normal') {
         normalLoop();
-    } else if (activeRandomNumber.getAttribute('data-difficulty') === 'hard') {
+    } else if (activeRandomNumber.dataset.difficulty === 'hard') {
         hardLoop();
     }
 }
@@ -171,7 +171,7 @@ function endGame() {
     timer.setAttribute('data-game-status', 'inactive');
     let finishScore = correctScore.textContent;
     let finishIncorrectScore = incorrectScore.textContent;
-    let difficulty = activeRandomNumber.getAttribute('data-difficulty');
+    let difficulty = activeRandomNumber.dataset.difficulty;
     Swal.fire({
         title: 'Great Job!',
         text: `Congrats! You finished ${difficulty} difficulty with ${finishScore} correct answers and ${finishIncorrectScore} incorrect answers. Think you can do better?`,
