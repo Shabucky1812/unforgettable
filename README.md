@@ -1,5 +1,7 @@
 # Unforgettable
+Unforgettable is intended to be a small yet enjoyable and addictive browser-based game that tests the user's memory with rapid intensity. The game should be easy to pick up for new users and quick and simple to play for both new and returning users. The site should be intuitive to navigate, pleasing on the eye, and not distract from the main game loop.
 
+![Am I Responsive image depicting the unforgettable website adapting to multiple screen sizes](assets/images/amiresponsive-unforgettable.png)
 ## Contents
 - [UX](#ux)  
 - [Design](#design)  
