@@ -20,6 +20,8 @@ body {
     font-family: 'Martel Sans', sans-serif;
     background-color: #FFEDD8;
     color: #227396;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -34,6 +36,9 @@ header {
     width: 100%;
     height: 100px;
     background-color: #EE6A05;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 header h1 {
@@ -52,7 +57,7 @@ header h1 {
     max-width: 1000px;
     font-weight: 600;
     text-align: center;
-    margin: 20px auto 0;
+    margin: 120px auto 0;
 }
 
 /* styling for both bars below instructions */
