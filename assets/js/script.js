@@ -19,12 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     document.getElementById('submit').addEventListener('click', checkGameRunning);
-    userInput.addEventListener('keydown', function checkEnter(event) {
-        if (event.key === 'Enter') {
-            checkGameRunning();
-        }
-    })
+    userInput.addEventListener('keydown', checkEnter);
+
 })
+
+/**
+ * Checks if the key pressed on keydown is the enter key.
+ */
+function checkEnter(event) {
+    if (event.key === 'Enter') {
+        checkGameRunning();
+    }
+}
 
 /**
  * Calls resetTimer function and starts the correct game loop.
@@ -141,10 +147,12 @@ function checkAnswer() {
  */
 function disableInput(pauseTime) {
     document.getElementById('submit').removeEventListener('click', checkGameRunning);
+    userInput.removeEventListener('keydown', checkEnter);
     
     window.setTimeout(enableInput, pauseTime);
     function enableInput() {
         document.getElementById('submit').addEventListener('click', checkGameRunning);
+        userInput.addEventListener('keydown', checkEnter);
     }
 }
 
