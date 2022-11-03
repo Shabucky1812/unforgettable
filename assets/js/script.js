@@ -8,7 +8,7 @@ const incorrectScore = document.getElementById('incorrect-answers');
 
 // wait for DOM content to load before running js
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     
     let difficultyButtons = document.getElementsByClassName('difficulty-button');
     for (let button of difficultyButtons) {
@@ -44,7 +44,7 @@ function runGame(difficulty) {
     } else {
         Swal.fire({
             icon: 'error',
-            text: "You can't start a new game yet. Finish this one first buddy!",
+            text: `You can't start a new game yet. Finish this one first buddy!`,
             confirmButtonColor: '#EE6A05'
         })
     }
