@@ -13,9 +13,15 @@ Unforgettable is intended to be a small yet enjoyable and addictive browser-base
 
 ## UX
 ### User Stories:  
+- The main goal of this website for new users is to quickly convey what the game is and how to play it. New users should instinctively know what each section of the page does and how to interact with the site. The first area of focus should be the instructions which should effectively educate the user on the basics of the game. Importantly, the website should seem easy to interact with to encourage the user to continue using it. The target audience of this website is anyone interested in quick brain training in a small and simple package.
+- The requirements for returning users are largely equivalent. The main focus for repeat visitors of the site is that the instructions do not serve as an annoying obstacle to be maneuvered upon each load of the site. The experience should remain consistent for a returning user every time they revisit the site.
 
 ## Design
-### Colour Scheme and Imagery:
+### Colour Scheme:
+![Coolors colour palette for the unforgettable website.](assets/images/coolors-unforgettable.png)
+Above is the colour scheme for the unforgettable website, courtesy of [Coolors](https://coolors.co/).  
+
+For this site, I wanted the colour scheme to stand back and let the main game sell the website. For this reason I chose to use only 3 main colours (Spanish Orange, Gunmetal, and CG Blue) and relied on shades of these to create a slightly more dynamic feel. I wanted the main shades to be orange because I find it to be an easier colour on the eye when viewed on a digital display and it also allowed for strong contrast with the blue used on the site. Additionally, I used a slightly orange-tinted white and a charcoal-ish grey instead of a stark white and black to continue the muted atmosphere.
 
 ### Typography:
 
