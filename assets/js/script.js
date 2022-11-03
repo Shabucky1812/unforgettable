@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame(difficulty) {
     if (timer.dataset.gameStatus === 'inactive') {
         resetTimer();
+        disableInput(1500);
         if (difficulty === 'easy') {
             easyLoop();
         } else if (difficulty === 'normal') {
@@ -123,7 +124,7 @@ function checkAnswer() {
         addIncorrectScore();
     }
     if (parseInt(timer.textContent) > 0) {
-        disableInput();
+        disableInput(2500);
         window.setTimeout(loopCorrectDifficulty, 1000);
     } else {
         window.setTimeout(function() {
@@ -135,12 +136,13 @@ function checkAnswer() {
 
 /**
  * Temporarily disables input event listeners to prevent bugs from the user
- * spamming submit
+ * spamming submit.
+ * @param {number} pauseTime - determines how long the input should be disabled.
  */
-function disableInput() {
+function disableInput(pauseTime) {
     document.getElementById('submit').removeEventListener('click', checkGameRunning);
     
-    window.setTimeout(enableInput, 2500);
+    window.setTimeout(enableInput, pauseTime);
     function enableInput() {
         document.getElementById('submit').addEventListener('click', checkGameRunning);
     }
