@@ -228,7 +228,7 @@ function resetTimer() {
 
 /**
  * Generates a random number based on the difficulty selected by the player and returns it to be displayed.
- * @param {*} digits - determines the length of the random generated number (based on game difficulty).
+ * @param {number} digits - determines the length of the random generated number (based on game difficulty).
  * @returns the string randomNumber which contains the newly created number to be outputted to the screen.
  */
 function generateNumber(digits) {

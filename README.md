@@ -24,7 +24,11 @@ Above is the colour scheme for the unforgettable website, courtesy of [Coolors](
 For this site, I wanted the colour scheme to stand back and let the main game sell the website. For this reason I chose to use only 3 main colours (Spanish Orange, Gunmetal, and CG Blue) and relied on shades of these to create a slightly more dynamic feel. I wanted the main shades to be orange because I find it to be an easier colour on the eye when viewed on a digital display and it also allowed for strong contrast with the blue used on the site. Additionally, I used a slightly orange-tinted white and a charcoal-ish grey instead of a stark white and black to continue the muted atmosphere.
 
 ### Typography:
+![Example text for both fonts used on the unforgettable website: Arvo and Martel Sans.](assets/images/unforgettable-fonts.png)  
+Above are the fonts used for this website: Arvo and Martel Sans courtesy of [Fontjoy](https://fontjoy.com/) and [Google Fonts](https://fonts.google.com/).
 
+Arvo is the font used for the site headers and buttons. Whilst I wanted the game to be the selling point of the website, the first thing a new user will see upon loading unforgettable is the header so I needed a font which was striking and impactful to encourage the user to remain on the site. It was important to me that the website still possessed character despite it's small size and little text content and I believe Arvo is the perfect font to create an impression even when used sparingly.  
+Martel Sans is the font used for the instruction text and, more importantly, the output display area. Whereas Arvo is intended to stand out, the role of Martel Sans is to convey important information when it is needed and to blend in when it is not. I didn't want the instruction text to obstruct the user's experience whilst they were playing the game so I wanted to choose a font that was plain and pleasant and nothing more. The biggest consideration in choosing Martel Sans over other simple fonts was how this font handled numbers, as they are the key element of the game and therefore the whole site. The numbers in Martel Sans all sit at the same level and have the same height which is perfect for this website because it just makes the random digits feel more consistent for the user.
 ## Features
 
 ### Future Implementations:
