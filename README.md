@@ -92,6 +92,7 @@ Changes that are committed and pushed to GitHub will automatically be updated on
 To clone this repository paste `git clone https://github.com/Shabucky1812/unforgettable.git` into the terminal of the editor you are using.  
 
 ## Testing  
+Please find the testing write-up for this project in [this Testing Document](testing.md).
 
 ## Credits
 ### Contents  
