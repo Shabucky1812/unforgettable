@@ -46,6 +46,13 @@ The instructions text is directly below the header and therefore the next place 
 
 The difficulty bar contains 3 buttons which all start the game on different difficulties (easy, normal, hard). The buttons change colour from blue to orange when hovered over with a mouse to indicate their clickability to the user. The difficulty bar is valuable to the user as it groups all of the difficulty buttons in one place and allows the user to run the game. The 3 levels of difficulty are important because they increase the range of users who can enjoy the website and allow a sense of progression for those who invest time into getting better at the game.
 
+### Statistics Bar:
+![Statistics bar on the unforgettable website](assets/images/unforgettable-stats-bar.png)  
+
+The statistics bar contains the game timer (featuring an icon from [Font Awesome](https://fontawesome.com/)) and the tallies for correct and incorrect answers. Once a game is started, the timer begins counting down from 60 seconds to 0. It is a valuable feature of the stats bar because it lets the user know how long they have left in their current game and adds a fun level of pressure and excitement to the game. The scores both reset to 0 at the start of a game and increment by 1 per correct or incorrect answer respectively. The scores are valuable to the user because they provide immediate feedback on their ability and allows them to create their own goals/milestones (e.g. can I complete normal mode without getting a single answer wrong?). The scores also add a competitivity to the game which encourages users to tell their friends about the site to try and beat each others scores.  
+
+
+
 ### Future Implementations:
 
 ## Technologies Used
