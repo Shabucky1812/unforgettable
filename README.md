@@ -34,7 +34,12 @@ Martel Sans is the font used for the instruction text and, more importantly, the
 ### Header:
 ![Header of unforgettable website](assets/images/unforgettable-header.png)  
 
-The header of the website very simply has a strong orange background colour and the main title of the page coloured gunmetal. It is designed to be eye-catching yet unobtrusive. I used negative letter-spacing values on the title text because I liked the way the individual characters blend neatly together with the Arvo font.  
+The header of the website very simply has a strong orange background colour and the main title of the page, coloured gunmetal. It is designed to be eye-catching yet unobtrusive. I used negative letter-spacing values on the title text because I liked the way the individual characters blend neatly together with the Arvo font. The header provides value to the user because it is inviting and creates the general 'mood' of the site.
+
+### Instructions:
+![Instructions text on the unforgettable website](assets/images/unforgettable-instructions.png)  
+
+The instructions text is directly below the header and therefore the next place a new user's eye settles. The text is kept concise to not overwhelm the user and contains all the basic rules of the game. Additionally, the sentence which refers to starting the game is a darker shade compared to the rest of the text to make it more noticeable at a glance and indicate it's importance. This is important for any user who happens to skim the information as it prevents frustration from struggling to run the game. This area of text is designed plainly so that returning users can ignore it and jump straight to the game. The instructions text is valuable to the user because it lets them know how to play the game and doesn't remove from the game experience.
 
 ### Future Implementations:
 
