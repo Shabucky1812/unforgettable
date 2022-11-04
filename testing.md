@@ -27,7 +27,11 @@ This website works as intended on the following browsers:
 - Mozilla Firefox  
 
 ### Responsiveness:
+320px Screen Responsiveness:  
+![Demonstration of the unforgettable website on a simulated 320px screen](assets/images/unforgettable-320px.png)
 
+5k Screen Responsivenss:  
+![Demonstration of the unforgettable website on a simulated 4k screen](assets/images/unforgettable-4k.png)  
 
 ## Bugs
 ### Solved Bugs:
