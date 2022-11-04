@@ -41,6 +41,11 @@ The header of the website very simply has a strong orange background colour and 
 
 The instructions text is directly below the header and therefore the next place a new user's eye settles. The text is kept concise to not overwhelm the user and contains all the basic rules of the game. Additionally, the sentence which refers to starting the game is a darker shade compared to the rest of the text to make it more noticeable at a glance and indicate it's importance. This is important for any user who happens to skim the information as it prevents frustration from struggling to run the game. This area of text is designed plainly so that returning users can ignore it and jump straight to the game. The instructions text is valuable to the user because it lets them know how to play the game and doesn't remove from the game experience.
 
+### Difficulty Bar:
+![Difficulty bar on the unforgettable website](assets/images/unforgettable-difficulty-bar.png)  
+
+The difficulty bar contains 3 buttons which all start the game on different difficulties (easy, normal, hard). The buttons change colour from blue to orange when hovered over with a mouse to indicate their clickability to the user. The difficulty bar is valuable to the user as it groups all of the difficulty buttons in one place and allows the user to run the game. The 3 levels of difficulty are important because they increase the range of users who can enjoy the website and allow a sense of progression for those who invest time into getting better at the game.
+
 ### Future Implementations:
 
 ## Technologies Used
