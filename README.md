@@ -27,9 +27,14 @@ For this site, I wanted the colour scheme to stand back and let the main game se
 ![Example text for both fonts used on the unforgettable website: Arvo and Martel Sans.](assets/images/unforgettable-fonts.png)  
 Above are the fonts used for this website: Arvo and Martel Sans courtesy of [Fontjoy](https://fontjoy.com/) and [Google Fonts](https://fonts.google.com/).
 
-Arvo is the font used for the site headers and buttons. Whilst I wanted the game to be the selling point of the website, the first thing a new user will see upon loading unforgettable is the header so I needed a font which was striking and impactful to encourage the user to remain on the site. It was important to me that the website still possessed character despite it's small size and little text content and I believe Arvo is the perfect font to create an impression even when used sparingly.  
+Arvo is the font used for the site headers and buttons. Whilst I wanted the game to be the selling point of the website, the first thing a new user will see upon loading unforgettable is the header so I needed a font which was striking and impactful to encourage the user to remain on the site. It was important to me that the website still possessed character despite its small size and little text content and I believe Arvo is the perfect font to create an impression even when used sparingly.  
 Martel Sans is the font used for the instruction text and, more importantly, the output display area. Whereas Arvo is intended to stand out, the role of Martel Sans is to convey important information when it is needed and to blend in when it is not. I didn't want the instruction text to obstruct the user's experience whilst they were playing the game so I wanted to choose a font that was plain and pleasant and nothing more. The biggest consideration in choosing Martel Sans over other simple fonts was how this font handled numbers, as they are the key element of the game and therefore the whole site. The numbers in Martel Sans all sit at the same level and have the same height which is perfect for this website because it just makes the random digits feel more consistent for the user.
+
 ## Features
+### Header:
+![Header of unforgettable website](assets/images/unforgettable-header.png)  
+
+The header of the website very simply has a strong orange background colour and the main title of the page coloured gunmetal. It is designed to be eye-catching yet unobtrusive. I used negative letter-spacing values on the title text because I liked the way the individual characters blend neatly together with the Arvo font.  
 
 ### Future Implementations:
 
