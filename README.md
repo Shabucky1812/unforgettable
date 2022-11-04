@@ -56,6 +56,11 @@ The statistics bar contains the game timer (featuring an icon from [Font Awesome
 
 The display area of the site is where the main interaction with the user occurs. The numbers for the user to memorise are displayed here aswell as various messages in response to user actions ('CORRECT', 'WRONG', 'FINISH'). As the user will be spending most of their game time looking at this area, I used a very muted orange tone for the background and a solid blue for the text to create high contrast and good readability. The font size is very large and the characters are spaced wide so that they stand out individually, these features are important because they aid the user in remembering the numbers that flash on display quickly. The display box itself also has a slight shadow effect and 2 curved edges to provide a little visual interest, not enough to distract but just enough to embelish the site in a positive way. The display area is valuable to the user as it is the main source of interaction and responsible for the smooth running of the game loop.
 
+### Input Area:
+![Input area of unforgettable website](assets/images/unforgettable-input.png)  
+
+The input area of the website is where the user enters and submits their guesses during a game. It contains a number input box and a submit button. The submit button is styled identically to the difficulty buttons for consistency and possesses the same hover-colouring to tell the user that it is also clickable. The input box automatically clears itself after every submit so the user only has to focus on the numbers and not an annoying UI. The user can submit their answer with the submit button or by just pressing the enter key on a keyboard. There is also a timer that prevents the user from accidentally/purposefully submitting multiple times in a row which would otherwise affect their score or cause errors within the game. This area is valuable to the user as it is where the user plays the game.
+
 
 
 ### Future Implementations:
