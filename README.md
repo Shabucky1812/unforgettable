@@ -96,7 +96,16 @@ Please find the testing write-up for this project in [this Testing Document](tes
 
 ## Credits
 ### Contents  
-  
+- All of the code for this website was written by me, [Shaun Buck](https://github.com/Shabucky1812).
+
 ### Media  
+- The icons used in the footer and about us subheadings were taken from [Font Awesome](https://fontawesome.com/).
+- The favicon used for this website was generated using [Favicon.io](https://favicon.io/).
 
 ### Acknowledgements  
+Ah, it is done!  
+Firstly and most importantly, huge thanks to my mentor, Brian Macharia. JavaScript has been an extremely rewarding and engrossing language to delve into and I have Brian to thank for pushing me and further refining my abilites with every meeting! Here's to more successful projects in the future.  
+Secondly, big thanks to my sister Elisha for filling all of my free-time in the last week with xmas films, you're the best.  
+Finally, mandatory thanks to Gojira and Angelmaker.  
+
+You too reader, have a banging day <3
