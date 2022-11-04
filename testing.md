@@ -21,6 +21,10 @@ Lighthouse results:
 *side note regarding the timer functionality: You may notice that the game does not finish immediately once the timer reaches 0 but instead finishes after the last submission once the timer has already reached 0. This is intentional because I believe it makes for better UX to allow the user to finish their last question instead of cutting them off.
 
 ### Browser Compatibility:
+This website works as intended on the following browsers:
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox  
 
 ### Responsiveness:
 
