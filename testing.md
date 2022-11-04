@@ -9,6 +9,16 @@ Lighthouse results:
 
 ## Manual Testing 
 ### Functionality:
+| Test Label | Test Action | Expected Outcome | Test Outcome |
+|------------|-------------|------------------|--------------|
+| External links function correctly. | Click all social media links in the footer. | All links should navigate where expected and open in a new tab. | PASS |
+| Difficulty buttons function correctly. | Click all difficulty buttons upon reloading the site. | Each button should start a game of the correct difficulty and not allow a new game to begin whilst one is still in progress. | PASS |
+| Submit button should not alter score whilst a game is not running. | Attempt to click the submit button whilst no game is active. | Neither score tally should increment and nothing should happen anywhere else on the site also. | PASS |
+| Submit button functions correctly whilst a game is active. | Click the submit button whilst a game is active and attempt to submit multiple times rapidly. | The user's guess should be checked and the correct score tally should be incremented, the submit button should not be clickable in rapid succession. | PASS |
+| Timer should function correctly. | Start a game and watch to ensure the timer starts at 60 and stops creating new numbers after it reaches 0. | The timer should reset to 60s when a new game is started and stop at 0. | PASS* |
+| End-Game message should function correctly | Play through a full game and see what happens when the game ends. | The game should stop looping and a custom alert should appear congratulating the user and displaying their final score. | PASS |
+
+*side note regarding the timer functionality: You may notice that the game does not finish immediately once the timer reaches 0 but instead finishes after the last submission once the timer has already reached 0. This is intentional because I believe it makes for better UX to allow the user to finish their last question instead of cutting them off.
 
 ### Browser Compatibility:
 
