@@ -61,7 +61,10 @@ The display area of the site is where the main interaction with the user occurs.
 
 The input area of the website is where the user enters and submits their guesses during a game. It contains a number input box and a submit button. The submit button is styled identically to the difficulty buttons for consistency and possesses the same hover-colouring to tell the user that it is also clickable. The input box automatically clears itself after every submit so the user only has to focus on the numbers and not an annoying UI. The user can submit their answer with the submit button or by just pressing the enter key on a keyboard. There is also a timer that prevents the user from accidentally/purposefully submitting multiple times in a row which would otherwise affect their score or cause errors within the game. This area is valuable to the user as it is where the user plays the game.
 
+### Footer:
+![Footer of the unforgettable website](assets/images/unforgettable-footer.png)  
 
+The footer of the site contains a small prompt to interact with an external unforgettable community and some links to common social media platforms. The links take the form of [Font Awesome](https://fontawesome.com/) icons and all open in a new tab as is standard. The styling of the footer is mostly equivalent to that of the header with the exception of the font used because it is not important for the footer to stand out in the same way. I wanted the header and footer to look similar because the symmetrical feel naturally draws the user's eye to the centre of the page, where the main game takes place. The footer is valuable to the user because it encourages the user to interact with other users of the site and colour-blocks the page to create a more pleasant UX. 
 
 ### Future Implementations:
 
