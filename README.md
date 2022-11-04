@@ -54,7 +54,7 @@ The statistics bar contains the game timer (featuring an icon from [Font Awesome
 ### Display Area:
 ![Display area of unforgettable website](assets/images/unforgettable-output.png)  
 
-The display area of the site is where the main interaction with the user occurs. The numbers for the user to memorise are displayed here aswell as various messages in response to user actions ('CORRECT', 'WRONG', 'FINISH'). As the user will be spending most of their game time looking at this area, I used a very muted orange tone for the background and a solid blue for the text to create high contrast and good readability. The font size is very large and the characters are spaced wide so that they stand out individually, these features are important because they aid the user in remembering the numbers that flash on display quickly. The display box itself also has a slight shadow effect and 2 curved edges to provide a little visual interest, not enough to distract but just enough to embelish the site in a positive way. The display area is valuable to the user as it is the main source of interaction and responsible for the smooth running of the game loop.
+The display area of the site is where the main interaction with the user occurs. The numbers for the user to memorise are displayed here as well as various messages in response to user actions ('CORRECT', 'WRONG', 'FINISH'). As the user will be spending most of their game time looking at this area, I used a very muted orange tone for the background and a solid blue for the text to create high contrast and good readability. The font size is very large and the characters are spaced wide so that they stand out individually, these features are important because they aid the user in remembering the numbers that flash on display quickly. The display box itself also has a slight shadow effect and 2 curved edges to provide a little visual interest, not enough to distract but just enough to embelish the site in a positive way. The display area is valuable to the user as it is the main source of interaction and responsible for the smooth running of the game loop.
 
 ### Input Area:
 ![Input area of unforgettable website](assets/images/unforgettable-input.png)  
@@ -99,7 +99,7 @@ Please find the testing write-up for this project in [this Testing Document](tes
 - All of the code for this website was written by me, [Shaun Buck](https://github.com/Shabucky1812).
 
 ### Media  
-- The icons used in the footer and about us subheadings were taken from [Font Awesome](https://fontawesome.com/).
+- The icons used in the footer and timer were taken from [Font Awesome](https://fontawesome.com/).
 - The favicon used for this website was generated using [Favicon.io](https://favicon.io/).
 
 ### Acknowledgements  

@@ -30,7 +30,7 @@ This website works as intended on the following browsers:
 320px Screen Responsiveness:  
 ![Demonstration of the unforgettable website on a simulated 320px screen](assets/images/unforgettable-320px.png)
 
-5k Screen Responsivenss:  
+4k Screen Responsivenss:  
 ![Demonstration of the unforgettable website on a simulated 4k screen](assets/images/unforgettable-4k.png)  
 
 ## Bugs
